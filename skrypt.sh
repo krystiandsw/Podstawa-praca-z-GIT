@@ -24,4 +24,16 @@ elif [ "$1" == "--init" ]; then
 	echo "export PATH=\$PATH:$(pwd)" >> ~/.bashrc
 	source ~/.bashrc
 	echo "Repozytorium sklonowane i sciezka dodana do PATH"
+elif [ "$1" == "--error" ] || [ "$1" == "-e" ]; then
+	count=100
+	if [ -n "$2" ]; then
+		count=$2
+	fi
+
+	for i in $(seq 1 $count); do
+		mkdir -p error$i
+		echo "Nazwa pliku: error$i/error$i.txt" > error$i/error$i.txt	
+		echo "Nazwa skryptu: $0" >> error$i/error$i.txt
+		echo "Data: $(date)" >> error$i/error$i.txt
+	done
 fi
