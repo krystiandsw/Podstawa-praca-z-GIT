@@ -13,4 +13,9 @@ elif [ "$1" == "--logs" ]; then
 		echo "Nazwa skryptu: $0" >> log$i.txt
 		echo "Data: $(date)" >> log$i.txt
 	done
+elif [ "$1" == "--help" ]; then
+	echo "Dostepne opcje:"
+	echo "--date - wyswietla date"
+	echo "--logs [liczba] - tworzy pliki log (domyslny 100)"	
+	echo "--help - wyswietla pomoc"
 fi
