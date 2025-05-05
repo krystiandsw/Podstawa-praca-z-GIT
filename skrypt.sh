@@ -17,6 +17,8 @@ elif [ "$1" == "--help" ] || [ "$1" == "-h" ]; then
 	echo "Dostepne opcje:"
 	echo "--date (-d) - wyswietla date"
 	echo "--logs (-l) [liczba] - tworzy pliki log (domyslny 100)"
+	echo "--error (-e) [liczba] - tworzy pliku bledow (domyslny 100)"
+	echo "--init - klonuje repo i dodaje do PATH"
 	echo "--help (-h) - wyswietla pomoc"
 elif [ "$1" == "--init" ]; then
 	repo_url="https://github.com/krystiandsw/Podstawa-praca-z-GIT.git"
